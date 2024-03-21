@@ -1,0 +1,107 @@
+@import "../../styles/variables";
+
+.selectWrapper {
+  position: relative;
+  border-radius: 12px;
+}
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  color: $color-gray;
+}
+.arrow {
+  position: absolute;
+  right: 17px;
+  top: 50%;
+  transform: translateY(50%);
+  transition: transform 0.2s ease-in-out, margin-top 0.2s ease-in-out;
+  margin-top: -12px;
+}
+
+.placeholder {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 16px 12px;
+  cursor: pointer;
+  border: 1px;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  background: $color-white;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.placeholder[data-status="default"] {
+  border: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+.placeholder[data-status="invalid"] {
+  border: 1px solid rgba(255, 0, 0, 1);
+}
+
+.placeholder[data-selected="true"] {
+  color: rgb(0, 0, 0);
+}
+
+.selectWrapper[data-is-active="true"] .arrow {
+  transform: rotate(180deg);
+  margin-top: 2px;
+}
+
+.selectWrapper[data-is-active="true"] .placeholder {
+  border: 1px solid $color-blue;
+}
+
+.selectWrapper:not([data-is-active="true"])
+.placeholder:not([data-status="invalid"]):hover {
+  border: 1px solid $color-blue;
+  color: $color-lilac;
+}
+
+.select {
+  display: grid;
+  position: absolute;
+  list-style: none;
+  width: 100%;
+  margin-top: 8px;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: 10;
+  border: 1px solid $color-blue;
+  border-radius: 8px;
+  background-color: $color-white;
+}
+
+.option {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 30px;
+  padding: 16px 12px;
+  border: 1px;
+  cursor: pointer;
+  font-style: normal;
+  border-radius: 8px;
+  color: $color-black;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+
+}
+
+.option[aria-selected="true"] {
+  background-color: $color-lilac;
+}
+.option:hover {
+  background-color: $color-light-gray2;
+}

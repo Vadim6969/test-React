@@ -1,0 +1,38 @@
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  width: 100%;
+  max-width: 340px;
+  button {
+    margin-top: 16px;
+  }
+}
+.input {
+  margin-bottom: 40px;
+}
+.checkbox {
+  margin-top: 16px;
+}
+.success-form {
+  h1 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 46px;
+    text-align: left;
+    margin-bottom: 24px;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    margin-bottom: 24px;
+  }
+}

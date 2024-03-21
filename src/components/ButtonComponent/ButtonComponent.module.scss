@@ -1,0 +1,26 @@
+@import '../../styles/_variables.scss';
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: $color-blue;
+  padding: 14px 32px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: left;
+  transition: ease-in-out 0.2s;
+  color: $color-white;
+  border-radius: 10px;
+  &:hover {
+    background-color: $color-blue1;
+  }
+}
+
+button[disabled] {
+  background-color: $color-light-gray1;
+  color: $color-gray;
+}
+button:focus {
+  background-color: $color-blue2;
+}

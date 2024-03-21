@@ -1,0 +1,63 @@
+@import "../../styles/variables";
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  min-width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  border-radius: 2px;
+  border: 1px solid $color-light-gray;
+  outline: none;
+  cursor: pointer;
+}
+.label {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  color: $color-black;
+}
+.error > * {
+  color: $color-danger;
+}
+
+
+label {
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+}
+
+
+input.checked {
+  background-color: $color-blue;
+  border-color: $color-blue;
+  position: relative;
+  &:hover {
+    background-color: $color-blue1;
+  }
+}
+
+input.checked::before {
+  content: "\2714";
+  font-size: 16px;
+  color: #fff;
+  position: absolute;
+  right: 3px;
+  top: -1px;
+}
+
+input[type="checkbox"]:disabled {
+  border-color: $color-light-gray;
+  background-color: $color-light-gray1;
+}
+
+input[type="checkbox"]:disabled + span {
+  color: $color-gray;
+}
+
+input[type="checkbox"]:focus {
+  border-color: $color-blue;
+  box-shadow: 0 0 20px $color-lilac1;
+}
